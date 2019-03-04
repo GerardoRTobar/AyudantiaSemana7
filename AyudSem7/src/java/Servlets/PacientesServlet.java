@@ -35,10 +35,6 @@ public class PacientesServlet extends HttpServlet {
             
             
             
-            
-                    
-            
-            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
