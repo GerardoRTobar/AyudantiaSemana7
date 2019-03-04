@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 import java.io.IOException;
@@ -13,10 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author gerardotobar
- */
+// @author gerardotobar
 @WebServlet(name = "PacientesServlet", urlPatterns = {"/PacientesServlet"})
 public class PacientesServlet extends HttpServlet {
 
@@ -25,7 +17,28 @@ public class PacientesServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            
+            String strName = request.getParameter("Name");
+            String strLastName = request.getParameter("LastName");
+            String strGender = request.getParameter("Gender");
+            String strSymptoms = request.getParameter("Symptoms");
+            
+            //Acá habrán variables que tienen que ser convertidas a numéricas por su naturaleza
+            String strBirthYear = request.getParameter("BirthYear");
+            String strBirthMonth = request.getParameter("BirthMonth");
+            String strBirthDay = request.getParameter("BirthDay");
+            
+            //Conversión de Variables
+            int iBirthYear = Integer.parseInt(strBirthYear);
+            int iBirthMonth = Integer.parseInt(strBirthMonth);
+            int iBirthDay = Integer.parseInt(strBirthDay);
+            
+            
+            
+            
+                    
+            
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
