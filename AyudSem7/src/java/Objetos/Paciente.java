@@ -11,4 +11,6 @@ package Objetos;
  */
 public class Paciente {
     
+    
+    
 }
